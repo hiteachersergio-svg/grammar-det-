@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Grammar Master — Band 8.0+ Range &amp; Accuracy</title>
+<style>
+  :root{
+    --navy:#0f172a;
+    --navy2:#1e293b;
+    --purple:#7c3aed;
+    --purple-light:#ddd6fe;
+    --blue:#2563eb;
+    --card:#ffffff;
+    --paper:#f8fafc;
+    --text:#0f172a;
+    --muted:#64748b;
+    --green:#16a34a;
+    --red:#dc2626;
+    --radius:16px;
+    --shadow:0 10px 25px -5px rgba(15,23,42,0.1);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;padding:0;background:var(--paper);color:var(--text);min-height:100vh;}
+
+  header.topbar{
+    background:linear-gradient(135deg,var(--navy) 0%, var(--navy2) 100%);
+    color:#fff;padding:20px;position:sticky;top:0;z-index:50;
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  }
+  .topbar-inner{max-width:1000px;margin:0 auto;}
+  .badge{
+    display:inline-block;background:var(--purple);color:#fff;font-size:11px;font-weight:800;
+    padding:4px 10px;border-radius:20px;text-transform:uppercase;margin-bottom:8px;
+  }
+  h1{margin:0 0 4px;font-size:22px;}
+  p.subtitle{margin:0 0 16px;color:#94a3b8;font-size:13px;}
+
+  nav.sec-nav{display:flex;gap:8px;flex-wrap:wrap;}
+  nav.sec-nav button{
+    flex:1 1 120px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+    color:#cbd5e1;padding:10px 8px;border-radius:10px;font-size:12px;font-weight:700;
+    cursor:pointer;transition:.2s;text-align:center;
+  }
+  nav.sec-nav button.active{background:var(--purple);border-color:var(--purple);color:#fff;}
+  nav.sec-nav button:hover:not(.active){background:rgba(255,255,255,0.18);}
+
+  main{max-width:1000px;margin:0 auto;padding:24px 16px 80px;}
+  .section-block{display:none;animation:fadeIn .3s ease;}
+  .section-block.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .rule-card{
+    background:var(--purple-light);border-left:5px solid var(--purple);
+    border-radius:8px;padding:16px 20px;margin-bottom:24px;color:var(--navy);
+  }
+  .rule-card h3{margin:0 0 6px;font-size:16px;}
+  .rule-card p{margin:0;font-size:13.5px;line-height:1.5;color:#334155;}
+
+  .question-card{
+    background:var(--card);border-radius:var(--radius);padding:20px 24px;
+    box-shadow:var(--shadow);margin-bottom:18px;border:1px solid #e2e8f0;
+  }
+  .q-num{font-size:12px;font-weight:800;color:var(--purple);letter-spacing:1px;margin-bottom:6px;}
+  .q-text{font-size:15.5px;font-weight:700;margin-bottom:14px;color:var(--navy);line-height:1.5;}
+
+  .options-grid{display:flex;flex-direction:column;gap:8px;}
+  .option-btn{
+    background:#f8fafc;border:2px solid #e2e8f0;padding:12px 16px;border-radius:10px;
+    font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;text-align:left;transition:.15s;
+  }
+  .option-btn:hover{border-color:var(--blue);background:#eff6ff;}
+  .option-btn.correct{background:#dcfce7;border-color:var(--green);color:#14532d;}
+  .option-btn.wrong{background:#ffe4e6;border-color:var(--red);color:#881337;}
+
+  .input-gap{
+    width:100%;max-width:320px;padding:10px 14px;border:2px solid #cbd5e1;
+    border-radius:8px;font-size:14px;font-weight:600;margin-right:10px;
+  }
+  .check-gap-btn{
+    background:var(--navy);color:#fff;border:none;padding:10px 18px;border-radius:8px;
+    font-weight:700;cursor:pointer;font-size:13px;
+  }
+  .feedback-msg{margin-top:10px;font-size:13px;font-weight:700;line-height:1.4;}
+
+  footer{text-align:center;color:var(--muted);font-size:12px;padding:20px;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="badge">Grammatical Range &amp; Accuracy</span>
+    <h1>IELTS Grammar Master Class (Band 8.0+)</h1>
+    <p class="subtitle">Estructuras gramaticales avanzadas indispensables para Writing Task 2 y Speaking</p>
+    <nav class="sec-nav" id="secNav">
+      <button class="nav-btn active" data-sec="1">MODO 1<br><small>Inversions</small></button>
+      <button class="nav-btn" data-sec="2">MODO 2<br><small>Mixed Conditionals</small></button>
+      <button class="nav-btn" data-sec="3">MODO 3<br><small>Participle Clauses</small></button>
+      <button class="nav-btn" data-sec="4">MODO 4<br><small>Cleft Sentences</small></button>
+      <button class="nav-btn" data-sec="5">MODO 5<br><small>Advanced Passive</small></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- MODO 1: INVERSIONS -->
+  <section class="section-block active" id="sec1">
+    <div class="rule-card">
+      <h3>📌 Inversion Structure (Estructuras Invertidas)</h3>
+      <p>Se usan para enfatizar puntos clave en ensayos académicos. Requieren alterar el orden del sujeto y el auxiliar después de expresiones negativas/restrictivas como <em>Not only, Seldom, Rarely, Under no circumstances</em>.</p>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 1</div>
+      <div class="q-text">"Not only <strong>[ _____ ]</strong> greenhouse gas emissions, but it also creates thousands of green jobs."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, false, 'g1q1')">A) renewable energy reduces</button>
+        <button class="option-btn" onclick="checkMC(this, true, 'g1q1')">B) does renewable energy reduce</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g1q1')">C) renewable energy does reduce</button>
+      </div>
+      <div class="feedback-msg" id="g1q1"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 2 (REWRITE &amp; REORDER)</div>
+      <div class="q-text">Completa la inversión con el auxiliar correcto: <br><em>"Seldom <strong>[ _____ ]</strong> governments encounter such widespread public consensus."</em></div>
+      <div>
+        <input type="text" class="input-gap" id="gap1" placeholder="Escribe el auxiliar (ej: do / does / have)...">
+        <button class="check-gap-btn" onclick="checkGap('gap1', 'do', 'g1q2')">Check</button>
+      </div>
+      <div class="feedback-msg" id="g1q2"></div>
+    </div>
+  </section>
+
+  <!-- MODO 2: MIXED CONDITIONALS -->
+  <section class="section-block" id="sec2">
+    <div class="rule-card">
+      <h3>📌 Mixed Conditionals (Condicionales Mixtos)</h3>
+      <p>Conectan una condición del pasado con un resultado presente (o viceversa). Ideales para analizar causas históricas e impactos actuales en el Writing Task 2.</p>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 3</div>
+      <div class="q-text">"If the council <strong>[ _____ ]</strong> in public transport years ago, the city would not face severe congestion today."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, true, 'g2q1')">A) had invested</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g2q1')">B) invested</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g2q1')">C) would invest</button>
+      </div>
+      <div class="feedback-msg" id="g2q1"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 4</div>
+      <div class="q-text">"If I were not deeply committed to environmental protection, I <strong>[ _____ ]</strong> for that NGO last year."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, false, 'g2q2')">A) would not work</button>
+        <button class="option-btn" onclick="checkMC(this, true, 'g2q2')">B) would not have worked</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g2q2')">C) had not worked</button>
+      </div>
+      <div class="feedback-msg" id="g2q2"></div>
+    </div>
+  </section>
+
+  <!-- MODO 3: PARTICIPLE CLAUSES -->
+  <section class="section-block" id="sec3">
+    <div class="rule-card">
+      <h3>📌 Participle Clauses (Cláusulas Participiales)</h3>
+      <p>Permiten condensar información y mejorar la cohesión eliminando conectores repetitivos como <em>"because", "after", "and"</em>. Ejemplo: <em>Having completed the study, researchers published the findings.</em></p>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 5</div>
+      <div class="q-text">"<strong>[ _____ ]</strong> the long-term consequences of climate change, policymakers drafted a new environmental treaty."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, true, 'g3q1')">A) Having recognized</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g3q1')">B) Recognized</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g3q1')">C) After recognize</button>
+      </div>
+      <div class="feedback-msg" id="g3q1"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 6 (FILL IN THE BLANK)</div>
+      <div class="q-text">"<strong>[ _____ ]</strong> by recent technological advances, traditional industries are adapting rapidly." (Usa la forma en participio pasado de <em>DRIVE</em>).</div>
+      <div>
+        <input type="text" class="input-gap" id="gap2" placeholder="Escribe el participio...">
+        <button class="check-gap-btn" onclick="checkGap('gap2', 'driven', 'g3q2')">Check</button>
+      </div>
+      <div class="feedback-msg" id="g3q2"></div>
+    </div>
+  </section>
+
+  <!-- MODO 4: CLEFT SENTENCES -->
+  <section class="section-block" id="sec4">
+    <div class="rule-card">
+      <h3>📌 Cleft Sentences (Estructuras de Énfasis)</h3>
+      <p>Muestran un dominio gramatical Band 8.0+ al reorganizar la oración para destacar un elemento específico usando <em>What... is/was</em> o <em>It is/was... that</em>.</p>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 7</div>
+      <div class="q-text">Transforma para dar énfasis: "The lack of funding causes the problem." → "What causes the problem <strong>[ _____ ]</strong> the lack of funding."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, true, 'g4q1')">A) is</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g4q1')">B) which is</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g4q1')">C) being</button>
+      </div>
+      <div class="feedback-msg" id="g4q1"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 8</div>
+      <div class="q-text">"It is through sustainable urban planning <strong>[ _____ ]</strong> modern cities can resolve housing shortages."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, true, 'g4q2')">A) that</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g4q2')">B) which</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g4q2')">C) where</button>
+      </div>
+      <div class="feedback-msg" id="g4q2"></div>
+    </div>
+  </section>
+
+  <!-- MODO 5: ADVANCED PASSIVE -->
+  <section class="section-block" id="sec5">
+    <div class="rule-card">
+      <h3>📌 Advanced Passive Structures (Estructuras Pasivas Impersonales)</h3>
+      <p>Esenciales para un tono académico neutro e impersonal. Se forman con <em>It is widely believed that...</em> o <em>X is thought to be...</em></p>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 9</div>
+      <div class="q-text">"Automation <strong>[ _____ ]</strong> to transform the global labor market significantly over the coming decade."</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkMC(this, true, 'g5q1')">A) is widely expected</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g5q1')">B) widely expects</button>
+        <button class="option-btn" onclick="checkMC(this, false, 'g5q1')">C) is wide expecting</button>
+      </div>
+      <div class="feedback-msg" id="g5q1"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">EJERCICIO 10 (FILL IN THE BLANK)</div>
+      <div class="q-text">"It is universally <strong>[ _____ ]</strong> that early childhood education yields lifelong benefits." (Usa el participio pasado de <em>ACKNOWLEDGE</em>).</div>
+      <div>
+        <input type="text" class="input-gap" id="gap3" placeholder="Escribe el participio...">
+        <button class="check-gap-btn" onclick="checkGap('gap3', 'acknowledged', 'g5q2')">Check</button>
+      </div>
+      <div class="feedback-msg" id="g5q2"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>🎓 IELTS Grammatical Range &amp; Accuracy Engine · Advanced C1/C2 Focus</footer>
+
+<script>
+/* NAVEGACIÓN DE SECCIONES */
+const navBtns = document.querySelectorAll('.sec-nav button');
+const sections = document.querySelectorAll('.section-block');
+
+navBtns.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    navBtns.forEach(b => b.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('sec' + btn.dataset.sec).classList.add('active');
+  });
+});
+
+/* CHECK MULTIPLE CHOICE CON EXPLICACIÓN */
+function checkMC(btn, isCorrect, targetId){
+  const parent = btn.parentElement;
+  const buttons = parent.querySelectorAll('.option-btn');
+  const fb = document.getElementById(targetId);
+
+  buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+
+  if(isCorrect){
+    btn.classList.add('correct');
+    fb.textContent = '✅ Correcto! Dominio gramatical preciso de nivel C1/C2.';
+    fb.style.color = 'var(--green)';
+  } else {
+    btn.classList.add('wrong');
+    fb.textContent = '❌ Incorrecto. Revisa el orden de las palabras o la concordancia verbal.';
+    fb.style.color = 'var(--red)';
+  }
+}
+
+/* CHECK FILL IN THE BLANKS */
+function checkGap(inputId, answer, targetId){
+  const val = document.getElementById(inputId).value.trim().toLowerCase();
+  const fb = document.getElementById(targetId);
+
+  if(val === answer.toLowerCase()){
+    fb.textContent = '✅ ¡Excelente! Ortografía y forma gramatical correctas.';
+    fb.style.color = 'var(--green)';
+  } else {
+    fb.textContent = `❌ Incorrecto. La respuesta correcta es: "${answer}"`;
+    fb.style.color = 'var(--red)';
+  }
+}
+</script>
+</body>
+</html>
